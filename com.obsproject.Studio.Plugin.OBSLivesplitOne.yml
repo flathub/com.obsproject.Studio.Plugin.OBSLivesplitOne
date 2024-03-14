@@ -2,7 +2,7 @@ id: com.obsproject.Studio.Plugin.OBSLivesplitOne
 branch: stable
 runtime: com.obsproject.Studio
 runtime-version: stable
-sdk: org.freedesktop.Sdk//22.08
+sdk: org.freedesktop.Sdk//23.08
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 build-extension: true
@@ -28,8 +28,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/LiveSplit/obs-livesplit-one.git
-        tag: v0.3.4
-        commit: 85f52a59694def276c8c489d09e95bb052310d6f
+        tag: v0.3.5
+        commit: faaf4e27b95effd9ce11d1a302e149cf9cac9489
         x-checker-data:
           type: git
           is-main-source: true
