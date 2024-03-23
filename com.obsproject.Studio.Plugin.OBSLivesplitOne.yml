@@ -30,10 +30,6 @@ modules:
         url: https://github.com/LiveSplit/obs-livesplit-one.git
         tag: v0.4.0
         commit: edfbc51f1da31da2bb5ac09b2e8c2f1e61a91b19
-        x-checker-data:
-          type: git
-          is-main-source: true
-          tag-pattern: ^v([\d.]+)$
       - sources.json
       - type: file
         path: com.obsproject.Studio.Plugin.OBSLivesplitOne.metainfo.xml
