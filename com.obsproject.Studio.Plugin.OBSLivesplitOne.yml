@@ -28,8 +28,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/LiveSplit/obs-livesplit-one.git
-        tag: v0.3.5
-        commit: faaf4e27b95effd9ce11d1a302e149cf9cac9489
+        tag: v0.4.0
+        commit: edfbc51f1da31da2bb5ac09b2e8c2f1e61a91b19
         x-checker-data:
           type: git
           is-main-source: true
