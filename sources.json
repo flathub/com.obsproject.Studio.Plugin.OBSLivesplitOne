@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/livesplit/livesplit-core",
-        "commit": "a13ea1b3b0f15fb8e4474a755cbb5fbb6cdb1ecc",
-        "dest": "flatpak-cargo/git/livesplit-core-a13ea1b"
+        "commit": "bb8cb41fe60ce25e5147342bb3df2eeb27087524",
+        "dest": "flatpak-cargo/git/livesplit-core-bb8cb41"
     },
     {
         "type": "git",
@@ -217,6 +217,19 @@
         "type": "inline",
         "contents": "{\"package\": \"9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567\", \"files\": {}}",
         "dest": "cargo/vendor/base64-0.21.7",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/base64/base64-0.22.1.crate",
+        "sha256": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6",
+        "dest": "cargo/vendor/base64-0.22.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6\", \"files\": {}}",
+        "dest": "cargo/vendor/base64-0.22.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1639,12 +1652,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-a13ea1b/crates/livesplit-auto-splitting\" \"cargo/vendor/livesplit-auto-splitting\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-bb8cb41/crates/livesplit-auto-splitting\" \"cargo/vendor/livesplit-auto-splitting\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"livesplit-auto-splitting\"\nversion = \"0.1.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-auto-splitting/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core/tree/master/crates/livesplit-auto-splitting\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-auto-splitting is a library that provides a runtime for running auto splitters that can control a speedrun timer. These auto splitters are provided as WebAssembly modules.\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"auto-splitting\",]\nedition = \"2021\"\n\n[dependencies]\narc-swap = \"1.6.0\"\nasync-trait = \"0.1.73\"\nindexmap = \"2.0.2\"\nsnafu = \"0.8.0\"\nwasi-common = \"17.0.0\"\n\n[features]\ndefault = [ \"enhanced-backtrace\",]\ndebugger-support = [ \"wasmtime/debug-builtins\",]\nenhanced-backtrace = [ \"wasmtime/addr2line\", \"wasmtime/demangle\",]\n\n[dependencies.anyhow]\nversion = \"1.0.45\"\ndefault-features = false\n\n[dependencies.bytemuck]\nversion = \"1.14.0\"\nfeatures = [ \"min_const_generics\",]\n\n[dependencies.proc-maps]\nversion = \"0.3.0\"\ndefault-features = false\n\n[dependencies.read-process-memory]\nversion = \"0.1.4\"\ndefault-features = false\n\n[dependencies.slotmap]\nversion = \"1.0.2\"\ndefault-features = false\n\n[dependencies.sysinfo]\nversion = \"0.30.0\"\ndefault-features = false\nfeatures = [ \"multithread\",]\n\n[dependencies.time]\nversion = \"0.3.3\"\ndefault-features = false\n\n[dependencies.wasmtime]\nversion = \"17.0.0\"\ndefault-features = false\nfeatures = [ \"cranelift\", \"parallel-compilation\",]\n\n[dependencies.wasmtime-wasi]\nversion = \"17.0.0\"\ndefault-features = false\nfeatures = [ \"sync\",]\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.52.0\"\nfeatures = [ \"Win32_Storage_FileSystem\",]\n",
+        "contents": "[package]\nname = \"livesplit-auto-splitting\"\nversion = \"0.1.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-auto-splitting/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core/tree/master/crates/livesplit-auto-splitting\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-auto-splitting is a library that provides a runtime for running auto splitters that can control a speedrun timer. These auto splitters are provided as WebAssembly modules.\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"auto-splitting\",]\nedition = \"2021\"\nrust-version = \"1.74\"\n\n[dependencies]\narc-swap = \"1.6.0\"\nasync-trait = \"0.1.73\"\nindexmap = \"2.0.2\"\nsnafu = \"0.8.0\"\nwasi-common = \"17.0.0\"\n\n[features]\ndefault = [ \"enhanced-backtrace\",]\ndebugger-support = [ \"wasmtime/debug-builtins\",]\nenhanced-backtrace = [ \"wasmtime/addr2line\", \"wasmtime/demangle\",]\n\n[dependencies.anyhow]\nversion = \"1.0.45\"\ndefault-features = false\n\n[dependencies.bytemuck]\nversion = \"1.14.0\"\nfeatures = [ \"min_const_generics\",]\n\n[dependencies.proc-maps]\nversion = \"0.3.0\"\ndefault-features = false\n\n[dependencies.read-process-memory]\nversion = \"0.1.4\"\ndefault-features = false\n\n[dependencies.slotmap]\nversion = \"1.0.2\"\ndefault-features = false\n\n[dependencies.sysinfo]\nversion = \"0.30.0\"\ndefault-features = false\nfeatures = [ \"multithread\",]\n\n[dependencies.time]\nversion = \"0.3.3\"\ndefault-features = false\n\n[dependencies.wasmtime]\nversion = \"17.0.0\"\ndefault-features = false\nfeatures = [ \"cranelift\", \"parallel-compilation\",]\n\n[dependencies.wasmtime-wasi]\nversion = \"17.0.0\"\ndefault-features = false\nfeatures = [ \"sync\",]\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.52.0\"\nfeatures = [ \"Win32_Storage_FileSystem\",]\n",
         "dest": "cargo/vendor/livesplit-auto-splitting",
         "dest-filename": "Cargo.toml"
     },
@@ -1657,12 +1670,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-a13ea1b/.\" \"cargo/vendor/livesplit-core\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-bb8cb41/.\" \"cargo/vendor/livesplit-core\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[[bench]]\nname = \"balanced_pb\"\nharness = false\n\n[[bench]]\nname = \"layout_state\"\nharness = false\n\n[[bench]]\nname = \"parsing\"\nharness = false\n\n[[bench]]\nname = \"scene_management\"\nharness = false\n\n[[bench]]\nname = \"software_rendering\"\nharness = false\n\n[[bench]]\nname = \"svg_rendering\"\nharness = false\n\n[package]\nname = \"livesplit-core\"\nversion = \"0.13.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-core/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-core is a library that provides a lot of functionality for creating a speedrun timer.\"\nreadme = \"README.md\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"gaming\",]\ncategories = [ \"no-std\", \"date-and-time\",]\ninclude = [ \"/benches/*\", \"/src/*\", \"/Cargo.toml\", \"/CHANGELOG.md\", \"/CODE_OF_CONDUCT.md\", \"/LICENSE-APACHE\", \"/LICENSE-MIT\", \"/README.md\",]\nedition = \"2021\"\nresolver = \"2\"\nrust-version = \"1.70\"\n\n[workspace]\nmembers = [ \"capi\", \"capi/bind_gen\", \"crates/*\",]\n\n[dependencies]\ncfg-if = \"1.0.0\"\nhashbrown = \"0.14.0\"\nlibm = \"0.2.1\"\nunicase = \"2.6.0\"\n\n[dev-dependencies]\nseahash = \"4.1.0\"\n\n[features]\ndefault = [ \"image-shrinking\", \"std\",]\nstd = [ \"base64-simd/detect\", \"base64-simd/std\", \"image\", \"libc\", \"livesplit-hotkey/std\", \"memchr/std\", \"cosmic-text?/std\", \"serde_json/std\", \"serde/std\", \"sha2/std\", \"slab/std\", \"simdutf8/std\", \"snafu/std\", \"time/local-offset\", \"tiny-skia?/std\", \"windows-sys\",]\nmore-image-formats = [ \"image?/bmp\", \"image?/ff\", \"image?/hdr\", \"image?/ico\", \"image?/jpeg\", \"image?/pnm\", \"image?/tga\", \"image?/tiff\", \"image?/webp\",]\nimage-shrinking = [ \"std\", \"more-image-formats\",]\nrendering = [ \"more-image-formats\", \"image?/gif\",]\ndefault-text-engine = [ \"rendering\", \"cosmic-text\",]\nfont-loading = [ \"std\", \"default-text-engine\",]\nsoftware-rendering = [ \"default-text-engine\", \"tiny-skia\", \"tiny-skia-path\",]\nsvg-rendering = [ \"default-text-engine\", \"ahash\",]\nwasm-web = [ \"std\", \"cosmic-text?/wasm-web\", \"js-sys\", \"livesplit-hotkey/wasm-web\", \"wasm-bindgen\", \"web-sys\",]\nnetworking = [ \"std\", \"splits-io-api\",]\nauto-splitting = [ \"std\", \"livesplit-auto-splitting\", \"tokio\", \"log\",]\n\n[lib]\nbench = false\n\n[dependencies.base64-simd]\nversion = \"0.8.0\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[dependencies.bytemuck]\nversion = \"1.9.1\"\ndefault-features = false\n\n[dependencies.bytemuck_derive]\nversion = \"1.4.1\"\ndefault_features = false\n\n[dependencies.itoa]\nversion = \"1.0.3\"\ndefault-features = false\n\n[dependencies.time]\nversion = \"0.3.3\"\ndefault-features = false\n\n[dependencies.livesplit-hotkey]\npath = \"crates/livesplit-hotkey\"\nversion = \"0.7.0\"\ndefault-features = false\n\n[dependencies.livesplit-title-abbreviations]\npath = \"crates/livesplit-title-abbreviations\"\nversion = \"0.3.0\"\n\n[dependencies.memchr]\nversion = \"2.3.4\"\ndefault-features = false\n\n[dependencies.simdutf8]\ngit = \"https://github.com/CryZe/simdutf8\"\nbranch = \"wasm-ub-panic\"\ndefault-features = false\nfeatures = [ \"aarch64_neon\",]\n\n[dependencies.serde]\nversion = \"1.0.186\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[dependencies.serde_derive]\nversion = \"1.0.186\"\ndefault_features = false\n\n[dependencies.serde_json]\nversion = \"1.0.60\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[dependencies.sha2]\nversion = \"0.10.8\"\ndefault-features = false\n\n[dependencies.slab]\nversion = \"0.4.9\"\ndefault-features = false\n\n[dependencies.smallstr]\nversion = \"0.3.0\"\ndefault-features = false\n\n[dependencies.snafu]\nversion = \"0.8.0\"\ndefault-features = false\n\n[dependencies.image]\nversion = \"0.25.0\"\nfeatures = [ \"png\",]\ndefault-features = false\noptional = true\n\n[dependencies.cosmic-text]\nversion = \"0.10.0\"\ndefault-features = false\nfeatures = [ \"no_std\",]\noptional = true\n\n[dependencies.tiny-skia]\nversion = \"0.11.1\"\ndefault-features = false\nfeatures = [ \"no-std-float\", \"simd\",]\noptional = true\n\n[dependencies.tiny-skia-path]\nversion = \"0.11.1\"\ndefault-features = false\noptional = true\n\n[dependencies.ahash]\nversion = \"0.8.11\"\ndefault-features = false\noptional = true\n\n[dependencies.splits-io-api]\nversion = \"0.4.0\"\noptional = true\n\n[dependencies.livesplit-auto-splitting]\npath = \"crates/livesplit-auto-splitting\"\nversion = \"0.1.0\"\noptional = true\n\n[dependencies.tokio]\nversion = \"1.24.2\"\ndefault-features = false\nfeatures = [ \"rt\", \"sync\", \"time\",]\noptional = true\n\n[dependencies.log]\nversion = \"0.4.14\"\ndefault-features = false\noptional = true\n\n[profile.max-opt]\ninherits = \"release\"\nlto = true\npanic = \"abort\"\ncodegen-units = 1\n\n[target.\"cfg(not(target_arch = \\\"wasm32\\\"))\".dev-dependencies]\ncriterion = \"0.5.0\"\n\n[profile.max-opt.build-override]\nopt-level = 0\n\n[package.metadata.docs.rs]\nall-features = true\n\n[target.\"cfg(all(target_arch = \\\"wasm32\\\", target_os = \\\"unknown\\\"))\".dependencies.js-sys]\nversion = \"0.3.55\"\noptional = true\n\n[target.\"cfg(all(target_arch = \\\"wasm32\\\", target_os = \\\"unknown\\\"))\".dependencies.wasm-bindgen]\nversion = \"0.2.78\"\noptional = true\n\n[target.\"cfg(all(target_arch = \\\"wasm32\\\", target_os = \\\"unknown\\\"))\".dependencies.web-sys]\nversion = \"0.3.28\"\ndefault-features = false\nfeatures = [ \"Performance\", \"Window\",]\noptional = true\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.52.0\"\nfeatures = [ \"Win32_Foundation\", \"Win32_Graphics_Gdi\",]\noptional = true\n\n[target.\"cfg(windows)\".dev-dependencies.sysinfo]\nversion = \"0.30.0\"\ndefault-features = false\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"l4re\\\", target_os = \\\"android\\\", target_os = \\\"macos\\\", target_os = \\\"ios\\\"))\".dependencies.libc]\nversion = \"0.2.101\"\noptional = true\n",
+        "contents": "[[bench]]\nname = \"balanced_pb\"\nharness = false\n\n[[bench]]\nname = \"layout_state\"\nharness = false\n\n[[bench]]\nname = \"parsing\"\nharness = false\n\n[[bench]]\nname = \"scene_management\"\nharness = false\n\n[[bench]]\nname = \"software_rendering\"\nharness = false\n\n[[bench]]\nname = \"svg_rendering\"\nharness = false\n\n[package]\nname = \"livesplit-core\"\nversion = \"0.13.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-core/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-core is a library that provides a lot of functionality for creating a speedrun timer.\"\nreadme = \"README.md\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"gaming\",]\ncategories = [ \"no-std\", \"date-and-time\",]\ninclude = [ \"/benches/*\", \"/src/*\", \"/Cargo.toml\", \"/CHANGELOG.md\", \"/CODE_OF_CONDUCT.md\", \"/LICENSE-APACHE\", \"/LICENSE-MIT\", \"/README.md\",]\nedition = \"2021\"\nresolver = \"2\"\nrust-version = \"1.79\"\n\n[workspace]\nmembers = [ \"capi\", \"capi/bind_gen\", \"crates/*\",]\n\n[dependencies]\ncfg-if = \"1.0.0\"\nhashbrown = \"0.14.0\"\nlibm = \"0.2.1\"\n\n[dev-dependencies]\nseahash = \"4.1.0\"\n\n[features]\ndefault = [ \"image-shrinking\", \"std\",]\nstd = [ \"base64-simd/detect\", \"base64-simd/std\", \"image\", \"libc\", \"livesplit-hotkey/std\", \"memchr/std\", \"cosmic-text?/std\", \"serde_json/std\", \"serde/std\", \"sha2/std\", \"slab/std\", \"simdutf8/std\", \"snafu/std\", \"time/local-offset\", \"tiny-skia?/std\", \"windows-sys\",]\nmore-image-formats = [ \"image?/bmp\", \"image?/ff\", \"image?/hdr\", \"image?/ico\", \"image?/jpeg\", \"image?/pnm\", \"image?/tga\", \"image?/tiff\", \"image?/webp\",]\nimage-shrinking = [ \"std\", \"more-image-formats\",]\nrendering = [ \"more-image-formats\", \"image?/gif\",]\ndefault-text-engine = [ \"rendering\", \"cosmic-text\",]\nfont-loading = [ \"std\", \"default-text-engine\",]\nsoftware-rendering = [ \"default-text-engine\", \"tiny-skia\", \"tiny-skia-path\",]\nsvg-rendering = [ \"default-text-engine\", \"ahash\",]\nweb-rendering = [ \"wasm-web\", \"rendering\", \"wasm-bindgen-futures\", \"web-sys/Blob\", \"web-sys/CanvasGradient\", \"web-sys/Document\", \"web-sys/DomRect\", \"web-sys/Element\", \"web-sys/HtmlCanvasElement\", \"web-sys/ImageBitmap\", \"web-sys/Path2d\", \"web-sys/TextMetrics\",]\nwasm-web = [ \"std\", \"cosmic-text?/wasm-web\", \"js-sys\", \"livesplit-hotkey/wasm-web\", \"wasm-bindgen\", \"web-sys\",]\nnetworking = [ \"std\", \"splits-io-api\",]\nauto-splitting = [ \"std\", \"livesplit-auto-splitting\", \"tokio\", \"log\",]\n\n[lib]\nbench = false\n\n[dependencies.base64-simd]\nversion = \"0.8.0\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[dependencies.bytemuck]\nversion = \"1.9.1\"\ndefault-features = false\n\n[dependencies.bytemuck_derive]\nversion = \"1.4.1\"\ndefault_features = false\n\n[dependencies.itoa]\nversion = \"1.0.3\"\ndefault-features = false\n\n[dependencies.time]\nversion = \"0.3.36\"\ndefault-features = false\n\n[dependencies.livesplit-hotkey]\npath = \"crates/livesplit-hotkey\"\nversion = \"0.7.0\"\ndefault-features = false\n\n[dependencies.livesplit-title-abbreviations]\npath = \"crates/livesplit-title-abbreviations\"\nversion = \"0.3.0\"\n\n[dependencies.memchr]\nversion = \"2.3.4\"\ndefault-features = false\n\n[dependencies.simdutf8]\ngit = \"https://github.com/CryZe/simdutf8\"\nbranch = \"wasm-ub-panic\"\ndefault-features = false\nfeatures = [ \"aarch64_neon\",]\n\n[dependencies.serde]\nversion = \"1.0.186\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[dependencies.serde_derive]\nversion = \"1.0.186\"\ndefault_features = false\n\n[dependencies.serde_json]\nversion = \"1.0.60\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[dependencies.sha2]\nversion = \"0.10.8\"\ndefault-features = false\n\n[dependencies.slab]\nversion = \"0.4.9\"\ndefault-features = false\n\n[dependencies.smallstr]\nversion = \"0.3.0\"\ndefault-features = false\n\n[dependencies.snafu]\nversion = \"0.8.0\"\ndefault-features = false\n\n[dependencies.image]\nversion = \"0.25.0\"\nfeatures = [ \"png\",]\ndefault-features = false\noptional = true\n\n[dependencies.cosmic-text]\nversion = \"0.10.0\"\ndefault-features = false\nfeatures = [ \"no_std\",]\noptional = true\n\n[dependencies.tiny-skia]\nversion = \"0.11.1\"\ndefault-features = false\nfeatures = [ \"no-std-float\", \"simd\",]\noptional = true\n\n[dependencies.tiny-skia-path]\nversion = \"0.11.1\"\ndefault-features = false\noptional = true\n\n[dependencies.ahash]\nversion = \"0.8.11\"\ndefault-features = false\noptional = true\n\n[dependencies.splits-io-api]\nversion = \"0.4.0\"\noptional = true\n\n[dependencies.livesplit-auto-splitting]\npath = \"crates/livesplit-auto-splitting\"\nversion = \"0.1.0\"\noptional = true\n\n[dependencies.tokio]\nversion = \"1.24.2\"\ndefault-features = false\nfeatures = [ \"rt\", \"sync\", \"time\",]\noptional = true\n\n[dependencies.log]\nversion = \"0.4.14\"\ndefault-features = false\noptional = true\n\n[profile.max-opt]\ninherits = \"release\"\nlto = true\npanic = \"abort\"\ncodegen-units = 1\nstrip = true\n\n[target.\"cfg(windows)\".dev-dependencies]\nwinreg = \"0.52.0\"\n\n[target.\"cfg(not(target_family = \\\"wasm\\\"))\".dev-dependencies]\ncriterion = \"0.5.0\"\n\n[profile.max-opt.build-override]\nopt-level = 0\n\n[package.metadata.docs.rs]\nall-features = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.js-sys]\nversion = \"0.3.55\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.wasm-bindgen]\nversion = \"0.2.78\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.wasm-bindgen-futures]\nversion = \"0.4.28\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.web-sys]\nversion = \"0.3.28\"\ndefault-features = false\nfeatures = [ \"Document\", \"Performance\", \"VisibilityState\", \"Window\",]\noptional = true\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.52.0\"\nfeatures = [ \"Win32_Foundation\", \"Win32_Graphics_Gdi\",]\noptional = true\n\n[target.\"cfg(any(target_os = \\\"linux\\\", target_os = \\\"l4re\\\", target_os = \\\"android\\\", target_os = \\\"macos\\\", target_os = \\\"ios\\\"))\".dependencies.libc]\nversion = \"0.2.101\"\noptional = true\n",
         "dest": "cargo/vendor/livesplit-core",
         "dest-filename": "Cargo.toml"
     },
@@ -1675,12 +1688,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-a13ea1b/crates/livesplit-hotkey\" \"cargo/vendor/livesplit-hotkey\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-bb8cb41/crates/livesplit-hotkey\" \"cargo/vendor/livesplit-hotkey\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"livesplit-hotkey\"\nversion = \"0.7.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-hotkey/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core/tree/master/crates/livesplit-hotkey\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-hotkey provides cross-platform global hotkey hooks.\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"hotkey\", \"keyboard\",]\nedition = \"2021\"\n\n[dependencies]\ncfg-if = \"1.0.0\"\nbitflags = \"2.0.1\"\n\n[features]\ndefault = [ \"std\",]\nstd = [ \"crossbeam-channel\", \"evdev\", \"mio\", \"nix\", \"promising-future\", \"serde/std\", \"windows-sys\", \"x11-dl\",]\nwasm-web = [ \"wasm-bindgen\", \"web-sys\", \"js-sys\",]\n\n[dependencies.serde]\nversion = \"1.0.186\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.52.0\"\nfeatures = [ \"Win32_Foundation\", \"Win32_System_LibraryLoader\", \"Win32_System_Threading\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_WindowsAndMessaging\",]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.crossbeam-channel]\nversion = \"0.5.6\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.evdev]\nversion = \"0.12.1\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.mio]\nversion = \"0.8.0\"\ndefault-features = false\nfeatures = [ \"os-ext\", \"os-poll\",]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.nix]\nversion = \"0.28.0\"\nfeatures = [ \"user\",]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.promising-future]\nversion = \"0.2.4\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.x11-dl]\nversion = \"2.20.0\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.wasm-bindgen]\nversion = \"0.2.54\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.web-sys]\nversion = \"0.3.28\"\ndefault-features = false\nfeatures = [ \"EventTarget\", \"Gamepad\", \"GamepadButton\", \"KeyboardEvent\", \"Navigator\", \"Window\",]\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.js-sys]\nversion = \"0.3.28\"\ndefault-features = false\noptional = true\n",
+        "contents": "[package]\nname = \"livesplit-hotkey\"\nversion = \"0.7.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-hotkey/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core/tree/master/crates/livesplit-hotkey\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-hotkey provides cross-platform global hotkey hooks.\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"hotkey\", \"keyboard\",]\nedition = \"2021\"\nrust-version = \"1.73\"\n\n[dependencies]\ncfg-if = \"1.0.0\"\nbitflags = \"2.0.1\"\n\n[features]\ndefault = [ \"std\",]\nstd = [ \"crossbeam-channel\", \"evdev\", \"mio\", \"nix\", \"promising-future\", \"serde/std\", \"windows-sys\", \"x11-dl\",]\nwasm-web = [ \"wasm-bindgen\", \"web-sys\", \"js-sys\",]\n\n[dependencies.serde]\nversion = \"1.0.186\"\ndefault-features = false\nfeatures = [ \"alloc\",]\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.52.0\"\nfeatures = [ \"Win32_Foundation\", \"Win32_System_LibraryLoader\", \"Win32_System_Threading\", \"Win32_UI_Input_KeyboardAndMouse\", \"Win32_UI_WindowsAndMessaging\",]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.crossbeam-channel]\nversion = \"0.5.6\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.evdev]\nversion = \"0.12.1\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.mio]\nversion = \"0.8.0\"\ndefault-features = false\nfeatures = [ \"os-ext\", \"os-poll\",]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.nix]\nversion = \"0.28.0\"\nfeatures = [ \"user\",]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.promising-future]\nversion = \"0.2.4\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.x11-dl]\nversion = \"2.20.0\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.wasm-bindgen]\nversion = \"0.2.54\"\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.web-sys]\nversion = \"0.3.28\"\ndefault-features = false\nfeatures = [ \"EventTarget\", \"Gamepad\", \"GamepadButton\", \"KeyboardEvent\", \"Navigator\", \"Window\",]\noptional = true\n\n[target.\"cfg(all(target_family = \\\"wasm\\\", target_os = \\\"unknown\\\"))\".dependencies.js-sys]\nversion = \"0.3.28\"\ndefault-features = false\noptional = true\n",
         "dest": "cargo/vendor/livesplit-hotkey",
         "dest-filename": "Cargo.toml"
     },
@@ -1693,12 +1706,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-a13ea1b/crates/livesplit-title-abbreviations\" \"cargo/vendor/livesplit-title-abbreviations\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/livesplit-core-bb8cb41/crates/livesplit-title-abbreviations\" \"cargo/vendor/livesplit-title-abbreviations\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"livesplit-title-abbreviations\"\nversion = \"0.3.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-title-abbreviations/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core/tree/master/crates/livesplit-title-abbreviations\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-title-abbreviations encapsulates the algorithm that LiveSplit uses to abbreviate game titles.\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"title\", \"abbreviation\",]\nedition = \"2018\"\n\n[dependencies]\nunicase = \"2.6.0\"\n",
+        "contents": "[package]\nname = \"livesplit-title-abbreviations\"\nversion = \"0.3.0\"\nauthors = [ \"Christopher Serr <christopher.serr@gmail.com>\",]\ndocumentation = \"https://docs.rs/livesplit-title-abbreviations/\"\nrepository = \"https://github.com/LiveSplit/livesplit-core/tree/master/crates/livesplit-title-abbreviations\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"livesplit-title-abbreviations encapsulates the algorithm that LiveSplit uses to abbreviate game titles.\"\nkeywords = [ \"speedrun\", \"timer\", \"livesplit\", \"title\", \"abbreviation\",]\nedition = \"2018\"\nrust-version = \"1.70\"\n",
         "dest": "cargo/vendor/livesplit-title-abbreviations",
         "dest-filename": "Cargo.toml"
     },
@@ -2257,14 +2270,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/quick-xml/quick-xml-0.31.0.crate",
-        "sha256": "1004a344b30a54e2ee58d66a71b32d2db2feb0a31f9a2d302bf0536f15de2a33",
-        "dest": "cargo/vendor/quick-xml-0.31.0"
+        "url": "https://static.crates.io/crates/quick-xml/quick-xml-0.34.0.crate",
+        "sha256": "6f24d770aeca0eacb81ac29dfbc55ebcc09312fdd1f8bbecdc7e4a84e000e3b4",
+        "dest": "cargo/vendor/quick-xml-0.34.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"1004a344b30a54e2ee58d66a71b32d2db2feb0a31f9a2d302bf0536f15de2a33\", \"files\": {}}",
-        "dest": "cargo/vendor/quick-xml-0.31.0",
+        "contents": "{\"package\": \"6f24d770aeca0eacb81ac29dfbc55ebcc09312fdd1f8bbecdc7e4a84e000e3b4\", \"files\": {}}",
+        "dest": "cargo/vendor/quick-xml-0.34.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2465,14 +2478,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/reqwest/reqwest-0.12.1.crate",
-        "sha256": "e333b1eb9fe677f6893a9efcb0d277a2d3edd83f358a236b657c32301dc6e5f6",
-        "dest": "cargo/vendor/reqwest-0.12.1"
+        "url": "https://static.crates.io/crates/reqwest/reqwest-0.12.4.crate",
+        "sha256": "566cafdd92868e0939d3fb961bd0dc25fcfaaed179291093b3d43e6b3150ea10",
+        "dest": "cargo/vendor/reqwest-0.12.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"e333b1eb9fe677f6893a9efcb0d277a2d3edd83f358a236b657c32301dc6e5f6\", \"files\": {}}",
-        "dest": "cargo/vendor/reqwest-0.12.1",
+        "contents": "{\"package\": \"566cafdd92868e0939d3fb961bd0dc25fcfaaed179291093b3d43e6b3150ea10\", \"files\": {}}",
+        "dest": "cargo/vendor/reqwest-0.12.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2551,19 +2564,6 @@
         "type": "inline",
         "contents": "{\"package\": \"8f1fb85efa936c42c6d5fc28d2629bb51e4b2f4b8a5211e297d599cc5a093792\", \"files\": {}}",
         "dest": "cargo/vendor/rustls-native-certs-0.7.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/rustls-pemfile/rustls-pemfile-1.0.4.crate",
-        "sha256": "1c74cae0a4cf6ccbbf5f359f08efdf8ee7e1dc532573bf0db71968cb56b1448c",
-        "dest": "cargo/vendor/rustls-pemfile-1.0.4"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"1c74cae0a4cf6ccbbf5f359f08efdf8ee7e1dc532573bf0db71968cb56b1448c\", \"files\": {}}",
-        "dest": "cargo/vendor/rustls-pemfile-1.0.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3159,14 +3159,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/time/time-0.3.34.crate",
-        "sha256": "c8248b6521bb14bc45b4067159b9b6ad792e2d6d754d6c41fb50e29fefe38749",
-        "dest": "cargo/vendor/time-0.3.34"
+        "url": "https://static.crates.io/crates/time/time-0.3.36.crate",
+        "sha256": "5dfd88e563464686c916c7e46e623e520ddc6d79fa6641390f2e3fa86e83e885",
+        "dest": "cargo/vendor/time-0.3.36"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"c8248b6521bb14bc45b4067159b9b6ad792e2d6d754d6c41fb50e29fefe38749\", \"files\": {}}",
-        "dest": "cargo/vendor/time-0.3.34",
+        "contents": "{\"package\": \"5dfd88e563464686c916c7e46e623e520ddc6d79fa6641390f2e3fa86e83e885\", \"files\": {}}",
+        "dest": "cargo/vendor/time-0.3.36",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4277,14 +4277,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/winreg/winreg-0.50.0.crate",
-        "sha256": "524e57b2c537c0f9b1e69f1965311ec12182b4122e45035b1508cd24d2adadb1",
-        "dest": "cargo/vendor/winreg-0.50.0"
+        "url": "https://static.crates.io/crates/winreg/winreg-0.52.0.crate",
+        "sha256": "a277a57398d4bfa075df44f501a17cfdf8542d224f0d36095a2adc7aee4ef0a5",
+        "dest": "cargo/vendor/winreg-0.52.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"524e57b2c537c0f9b1e69f1965311ec12182b4122e45035b1508cd24d2adadb1\", \"files\": {}}",
-        "dest": "cargo/vendor/winreg-0.50.0",
+        "contents": "{\"package\": \"a277a57398d4bfa075df44f501a17cfdf8542d224f0d36095a2adc7aee4ef0a5\", \"files\": {}}",
+        "dest": "cargo/vendor/winreg-0.52.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
