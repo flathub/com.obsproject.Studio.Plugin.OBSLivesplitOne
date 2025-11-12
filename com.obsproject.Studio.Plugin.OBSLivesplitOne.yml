@@ -2,18 +2,20 @@ id: com.obsproject.Studio.Plugin.OBSLivesplitOne
 branch: stable
 runtime: com.obsproject.Studio
 runtime-version: stable
-sdk: org.freedesktop.Sdk//23.08
+sdk: org.freedesktop.Sdk//25.08
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 build-extension: true
 separate-locales: false
 appstream-compose: false
+
 build-options:
   prefix: /app/plugins/OBSLivesplitOne
   strip: true
   append-path: /usr/lib/sdk/rust-stable/bin
   env:
     CARGO_HOME: /run/build/obs-livesplit-one-plugin/cargo
+    RUSTFLAGS: "-L /app/lib -L /app/lib/obs-plugins -C link-arg=-Wl,-rpath,/app/lib"
 
 modules:
   - name: obs-livesplit-one-plugin
@@ -23,13 +25,12 @@ modules:
       - cargo --offline build --release --verbose
       - install -Dm755 ./target/release/libobs_livesplit_one.so -t ${FLATPAK_DEST}/lib/obs-plugins/
       - install -Dm644 ./${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
-        ${FLATPAK_ID}
+
     sources:
       - type: git
         url: https://github.com/LiveSplit/obs-livesplit-one.git
-        tag: v0.4.1
-        commit: 82e2f8e271c80eb6ef9453dded76de24e7332b6f
+        tag: v0.4.2
+        commit: 0f170dda5eebd15991b34ebd5244146f791bc4e0
       - sources.json
       - type: file
         path: com.obsproject.Studio.Plugin.OBSLivesplitOne.metainfo.xml
