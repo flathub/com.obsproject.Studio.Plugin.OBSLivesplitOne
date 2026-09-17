@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/LiveSplit/obs-livesplit-one.git
-        tag: v0.5.2
-        commit: 332be4390c32ccf33f9bdc6e4770a54d4dc83e2a
+        tag: v0.5.3
+        commit: 56ce72af679145666642d0b40ab2cdb340781ba8
       - sources.json
       - type: file
         path: com.obsproject.Studio.Plugin.OBSLivesplitOne.metainfo.xml
